@@ -31,7 +31,7 @@ base_amount = st.number_input(
     "Enter base amount",
     min_value=0.0,
     step=1.0,
-    format="%.2f",
+ 
     placeholder="Enter amount here..."
 )
 
