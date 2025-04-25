@@ -4,6 +4,7 @@ from PIL import Image
 # Set up branding
 st.set_page_config(page_title="RMBAAMS Calculator", page_icon="💅", layout="centered", initial_sidebar_state="collapsed")
 
+
 # Title
 st.markdown("<h2 style='color: gold; text-align: center;'>Rakhi Maa Beauty Academy & Makeup Studio</h2>", unsafe_allow_html=True)
 
@@ -33,7 +34,13 @@ base_amount = st.number_input(
     format="%.2f",
     placeholder="Enter amount here..."
 )
-percent = st.slider("Select percentage", 1, 100, 10)
+
+# Dropdown instead of slider
+percent = st.selectbox(
+    "Select percentage",
+    options=[i for i in range(1, 101)],
+    index=9  # Default is 10%
+)
 
 if st.button("Calculate Percentage"):
     if base_amount:
@@ -44,4 +51,3 @@ if st.button("Calculate Percentage"):
 
 # Footer
 st.markdown("---")
-
