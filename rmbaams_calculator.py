@@ -4,12 +4,6 @@ from PIL import Image
 # Set up branding
 st.set_page_config(page_title="RMBAAMS Calculator", page_icon="💅", layout="centered", initial_sidebar_state="collapsed")
 
-# Centered logo
-logo = Image.open("New logo.png")
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.image(logo, width=200)
-
 # Title
 st.markdown("<h2 style='color: gold; text-align: center;'>Rakhi Maa Beauty Academy & Makeup Studio</h2>", unsafe_allow_html=True)
 
