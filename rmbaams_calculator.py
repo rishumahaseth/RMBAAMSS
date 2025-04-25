@@ -4,7 +4,6 @@ from PIL import Image
 # Set up branding
 st.set_page_config(page_title="RMBAAMS Calculator", page_icon="💅", layout="centered", initial_sidebar_state="collapsed")
 
-
 # Title
 st.markdown("<h2 style='color: gold; text-align: center;'>Rakhi Maa Beauty Academy & Makeup Studio</h2>", unsafe_allow_html=True)
 
@@ -14,7 +13,6 @@ inr_amount = st.number_input(
     "Enter amount in INR ₹",
     min_value=0.0,
     step=1.0,
-    format="%.2f",
     placeholder="Type INR amount..."
 )
 if st.button("Convert to NPR"):
@@ -31,7 +29,6 @@ base_amount = st.number_input(
     "Enter base amount",
     min_value=0.0,
     step=1.0,
- 
     placeholder="Enter amount here..."
 )
 
