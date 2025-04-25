@@ -13,10 +13,11 @@ inr_amount = st.number_input(
     "Enter amount in INR ₹",
     min_value=0.0,
     step=1.0,
+    value=None,  # No default value to avoid showing 0.00
     placeholder="Type INR amount..."
 )
 if st.button("Convert to NPR"):
-    if inr_amount:
+    if inr_amount is not None:  # Check if the user has entered a value
         npr_amount = inr_amount * 1.6
         st.success(f"Equivalent NPR: Rs. {npr_amount:.2f}")
 
@@ -29,6 +30,7 @@ base_amount = st.number_input(
     "Enter base amount",
     min_value=0.0,
     step=1.0,
+    value=None,  # No default value to avoid showing 0.00
     placeholder="Enter amount here..."
 )
 
@@ -40,7 +42,7 @@ percent = st.selectbox(
 )
 
 if st.button("Calculate Percentage"):
-    if base_amount:
+    if base_amount is not None:  # Check if the user has entered a value
         percent_value = base_amount * percent / 100
         final_amount = base_amount + percent_value
         st.info(f"➊ {percent}% of {base_amount:.2f} = {percent_value:.2f}")
