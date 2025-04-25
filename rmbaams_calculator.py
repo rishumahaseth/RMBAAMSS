@@ -5,7 +5,7 @@ from PIL import Image
 st.set_page_config(page_title="RMBAAMS Calculator", page_icon="💅", layout="centered", initial_sidebar_state="collapsed")
 
 # Centered logo
-logo = Image.open("")
+logo = Image.open("New logo.png")
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.image(logo, width=200)
