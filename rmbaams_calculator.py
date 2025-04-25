@@ -44,4 +44,4 @@ if st.button("Calculate Percentage"):
 
 # Footer
 st.markdown("---")
-st.markdown("<center>💅 Thank you for choosing RMBAAMS 💅</center>", unsafe_allow_html=True)
+
